@@ -1,4 +1,10 @@
 .cart{
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px ;
+    /* grid-template-columns:repeat(6,1fr); */
     margin-right: px;
+}
+.cart img{
+    width: 100px;
 }

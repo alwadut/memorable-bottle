@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import './Cart.css';
 
 const Cart = ({cart}) => {
@@ -16,6 +17,14 @@ const Cart = ({cart}) => {
   );
 };
 
-
+Cart.propTypes = {
+  cart: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      img: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 export default Cart;
+ 
